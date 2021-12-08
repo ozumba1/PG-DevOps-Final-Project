@@ -10,7 +10,7 @@ public class PostgressDataSource {
 
   @Configuration
   public class PostgresDatasource {
-    @Bean
+    
     @ConfigurationProperties("app.datasource")
     public HikariDataSource hikariDataSource() {
       return DataSourceBuilder
