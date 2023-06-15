@@ -1,8 +1,18 @@
 
-app:
+spring:
   datasource:
-    jdbc-url: jdbc:postgresql://34.125.58.4:5432/demodb
-    username: postgress
+    url: jdbc:postgresql://34.203.13.71:5432/postgres
+    username: postgres
     password: password
-    pool-size: 30
+    driver-class-name: org.postgresql.Driver
+    platform: postgres
+    initialization-mode: always
+    continue-on-error: true
+    hikari:
+      maximum-pool-size: 30
+    flyway:
+      enabled: true
+      locations: classpath:db/migration
+server:
+    port: 8081
 
